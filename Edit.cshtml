@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model PRG4_M3_P1_001.Models.Buku
+@{
+    ViewData["Title"] = "Edit Buku";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Edit Buku</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-controller="Buku" asp-action="Edit">
+                            <input type="hidden" asp-for="id"/>
+                            <div class="form-group">
+                                <label asp-for="judul" class="control-label">Judul</label>
+                                <input asp-for="judul" class="form-control" name="judul" />
+                                <span asp-validation-for="judul" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="penulis" class="control-label">Penulis</label>
+                                <input asp-for="penulis" class="form-control" name="penulis"/>
+                                <span asp-validation-for="penulis" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="penerbit" class="control-label">Penerbit</label>
+                                <input asp-for="penerbit" class="form-control" name="penerbit" />
+                                <span asp-validation-for="penerbit" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="issn" class="control-label">ISSN</label>
+                                <input asp-for="issn" class="form-control" name="issn"/>
+                                <span asp-validation-for="issn" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="tahun" class="control-label">Tahun</label>
+                                <input asp-for="tahun" class="form-control" name="tahun"/>
+                                <span asp-validation-for="tahun" class="text-danger"></span>
+                            </div>
+                            <br />
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
